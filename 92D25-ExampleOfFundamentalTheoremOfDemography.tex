@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfFundamentalTheoremOfDemography}
+\pmcreated{2013-03-22 14:15:59}
+\pmmodified{2013-03-22 14:15:59}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{example of fundamental theorem of demography}
+\pmrecord{6}{35716}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{92D25}
+\pmclassification{msc}{37A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{states}
+\PMlinkescapeword{dominant}
+\PMlinkescapeword{class}
+\PMlinkescapeword{level}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{fixed}
+
+Assume a population with a \PMlinkescapetext{characteristic} (age, sex, etc.) that is described by a vector $x(t)$, where $x_1(t),\ldots,x_n(t)$ represents the number of individuals in the population who possess the characteristic at a level $1,\ldots,n$, at time $t$.
+
+For example, consider age-groups, and assume $x_0(t)$ is the number of individuals in the population that are aged 0 to 1 year, $x_1(t)$ is the number of individuals aged 1 to 2 years, etc.
+
+Suppose that the transition from one class to another is described by a matrix $A(t)$. In the case of age-groups, this matrix will for example describe mortality in a given age-group. This matrix, in the case of non deterministic modelling, will define a Markov chain.
+
+The fundamental theorem of demography then states that if the matrix $A(t)$ satisfies the required properties, then the distribution vector $x(t)$ converges to the eigenvector associated to the dominant eigenvalue, \emph{regardless} of the behavior of the total population $\|x(t)\|$.
+
+Hence, in the case of age-groups, the \emph{proportion} of individuals aged, say, 1 to 2 years, tends to a fixed value, even if the total population increases.
+%%%%%
+%%%%%
+\end{document}

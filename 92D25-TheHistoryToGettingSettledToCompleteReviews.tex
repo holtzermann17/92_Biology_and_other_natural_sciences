@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheHistoryToGettingSettledToCompleteReviews}
+\pmcreated{2013-11-27 10:59:44}
+\pmmodified{2013-11-27 10:59:44}
+\pmowner{jacou}{1000048}
+\pmmodifier{}{0}
+\pmtitle{The History to Getting Settled To Complete Reviews}
+\pmrecord{20}{40622}
+\pmprivacy{1}
+\pmauthor{jacou}{0}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{92D25}
+\pmrelated{MarkovChain}
+\pmrelated{Matrix}
+\pmrelated{TransitionMatrix}
+
+
+\begin{document}
+The \emph{Leslie model} is an approach to predicting the \PMlinkescapetext{size} of an animal population after $t$ (discrete) \PMlinkescapetext{units} of time. The population is split up into a partition of age \PMlinkescapetext{groups} according to \PMlinkescapetext{differences} in fecundity and survival rates in each \PMlinkescapetext{group}. The population \PMlinkescapetext{growth} data are then related with a \emph{Leslie matrix}. The \PMlinkescapetext{basic} form of a Leslie matrix is as follows:
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{defn}
+Given $n$ age \PMlinkescapetext{categories} for a population and $0 \leq j \leq n$, there is a fecundity rate $F_j$, which is the average number of offspring from a member of \PMlinkescapetext{category} $j$ who live long enough to enter the youngest age \PMlinkescapetext{category} (zero of course) in a single unit of time, and a survival rate $S_j$, which is the percentage of members in the \PMlinkescapetext{category} $j$ who live to enter the \PMlinkescapetext{category} $j+1$ in a single unit of time. These data are entered into a Leslie matrix like so:
+
+\begin{displaymath}
+\begin{bmatrix}
+  F_1 & F_2 & F_3 & F_4 \\
+  S_1 &  0  &  0  &  0  \\
+   0  & S_2 &  0  &  0  \\
+   0  &  0  & S_3 &  0  \\
+\end{bmatrix}
+\end{displaymath}
+
+In other \PMlinkescapetext{words}, if $A$ is a Leslie matrix, then $a_{0j} = F_j$ for all $0 \leq j \leq n$ and $a_{(j+1)(j)} = S_j$ for all $0 \leq j \leq n-1$.
+\end{defn}
+
+Given an initial population vector $v$ that gives the number of members in each \PMlinkescapetext{category}, the Leslie model predicts that the number of members in each \PMlinkescapetext{category} after $t$ \PMlinkescapetext{units} of time is $(A^{t})v$. The \PMlinkescapetext{unit} of time is customarily (but not necessarily) years.
+
+Note that the Leslie \PMlinkescapetext{model} can be thought of as \PMlinkescapetext{similar} to a Markov chain. The most important \PMlinkescapetext{difference} is that, since reproduction introduces new members into the population, the fecundity and survival rates in any given \PMlinkescapetext{group} do not necessarily add up to one. Also, unlike \emph{most} Markov chains, the next state for any member of the population is of course deterministic. \footnote{A small \PMlinkescapetext{difference} in convention is that the Leslie matrix is usually to the \emph{left} of the initial population vector when the two are multiplied, as compared to a Markov chain where the \emph{initial distribution} is usually to the left. This plays a role in the \PMlinkescapetext{structure} of the matrices in either case.}
+
+\begin{thebibliography}{9}
+\bibitem{source}
+\PMlinkexternal{Notes for \emph{WLF 448: Fish \& Wildlife Population Ecology}}{http://www.cnr.uidaho.edu/wlf448/Leslie1.htm}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

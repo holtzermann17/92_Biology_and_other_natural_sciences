@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfDemographyProofOf}
+\pmcreated{2013-03-22 13:24:42}
+\pmmodified{2013-03-22 13:24:42}
+\pmowner{aplant}{12431}
+\pmmodifier{aplant}{12431}
+\pmtitle{fundamental theorem of demography, proof of}
+\pmrecord{10}{33957}
+\pmprivacy{1}
+\pmauthor{aplant}{12431}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{92D25}
+\pmclassification{msc}{37A30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\Point{$\bullet$ }
+\def\ie{\emph{i.e.},}
+\begin{document}
+\Point First we will prove that there exist $m, M>0$ such that
+\begin{equation}
+m\leq \frac{\|x_{k+1}\|}{\|x_k\|}\leq M
+\label{ineq:Golub0}
+\end{equation}
+for all $k$,
+with $m$ and $M$ \PMlinkescapetext{independent} of the sequence. In \PMlinkescapetext{order} to show this we 
+use the primitivity of the matrices $A_k$ and $A_\infty$.
+Primitivity of $A_\infty$ implies that there exists
+$l\in\mathbb{N}$ such that
+\[
+A^l_\infty\gg 0
+\]
+By continuity, this implies that there exists $k_0$ such that, for all 
+$k\geq k_0$, we have
+\[
+A_{k+l}A_{k+l-1}\cdots A_k\gg 0
+\]
+Let us then write $x_{k+l+1}$ as a function of $x_k$:
+\[
+x_{k+l+1}=A_{k+l}\cdots A_kx_k
+\]
+We thus have
+\begin{equation}
+\|x_{k+l+1}\|\leq C^{l+1} \|x_k\|
+\label{ineq:Golub1}
+\end{equation}
+But since the matrices $A_{k+l}$,\ldots,$A_k$ are strictly positive
+for $k\geq k_0$, there exists a $\varepsilon>0$ such that each
+\PMlinkescapetext{component} of these matrices is superior or equal to 
+$\varepsilon$. From this we deduce that
+\[
+\|x_{k+l+1}\|\geq \varepsilon \|x_k\|
+\]
+for all $k\geq k_0$. 
+Applying \PMlinkescapetext{relation} (\ref{ineq:Golub1}), we then have that
+\[
+C^{l} \|x_{k+1}\|\geq \varepsilon \|x_k\|
+\]
+which yields
+\[
+\|x_{k+1}\|\geq \frac{\varepsilon}{C^l}\|x_k\|
+\]
+for all $k\geq 0$,
+and so we indeed have \PMlinkescapetext{relation} (\ref{ineq:Golub0}).
+
+%%%%
+\Point Let us denote by $e_k$ the (normalised) Perron eigenvector of
+$A_k$. Thus
+\[
+A_ke_k=\lambda_ke_k\quad \|e_k\|=1
+\]
+Let us denote by $\pi_k$ the projection on the supplementary space of
+$\{e_k\}$ invariant by $A_k$. Choosing a proper norm, we can find
+$\varepsilon>0$ such that
+\[
+\left| A_k\pi_k \right| \leq (\lambda_k-\varepsilon)
+\]
+for all $k$.
+%%%%
+\Point We shall now prove that
+\[
+\frac{\left<e_{k+1}^*,x_{k+1}\right>}{\left<e_k^*,x_k\right>}\to \lambda_\infty \textrm{
+  when } k\to\infty
+\]
+In order to do this, we compute the inner product of the sequence 
+$x_{k+1}=A_kx_k$ with the $e_k$'s:
+\begin{eqnarray*}
+\left<e_{k+1}^*,x_{k+1}\right>&=& \left<e_{k+1}^*-e_k^*,A_kx_k\right>+\lambda_k \left<e_k^*,x_k\right>
+\\
+&=& o\left(\left<e_k^*,x_k\right> \right)+ \lambda_k \left<e_k^*,x_k\right>
+\end{eqnarray*}
+Therefore we have
+\[
+\frac{\left<e_{k+1}^*,x_{k+1}\right>}{\left<e_k^*,x_k\right>}=o(1)+\lambda_k
+\]
+
+\Point Now assume
+\[
+u_k=\frac{\pi_k x_k}{\left<e_k^*,x_k\right>}
+\]
+We will verify that $u_k\to 0$ when $k\to\infty$. We have
+\begin{eqnarray*}
+u_{k+1}&=& (\pi_{k+1}-\pi_k)A_k\frac{x_k}{\left<e_{k+1}^*,x_{k+1}\right>} +
+\frac{\left<e_k^*,x_k\right>}{\left<e_k^*,x_{k+1}\right>} A_k\pi_k\frac{x_k}{\left<e_k^*,x_k\right>}
+\end{eqnarray*}
+and so
+\[
+|u_{k+1}|\leq
+|\pi_{k+1}-\pi_k|C'+\frac{\left<e_k^*,x_k\right>}{\left<e_{k+1}^*,x_{k+1}\right>}
+(\lambda_k-\varepsilon) |u_k|
+\]
+We deduce that there exists $k_1\geq k_0$ such that, for all $k\geq k_1$
+\[
+|u_{k+1}| \leq \delta_k+(\lambda_\infty-\frac{\varepsilon}{2}) |u_k|
+\]
+where we have noted
+\[
+\delta_k=(\pi_{k+1}-\pi_k)C'
+\]
+We have $\delta_k\to 0$ when $t\to\infty$, we thus finally deduce that 
+\[
+|u_k|\to 0\textrm{ when }k\to\infty
+\]
+Remark that this also implies that
+\[
+z_k=\frac{\pi_kx_k}{\|x_k\|}\to 0\textrm{ when } k\to\infty
+\]
+
+\Point We have $z_k\to 0$ when $k\to\infty$, and $x_k/\|x_k\|$
+can be written
+\[
+\frac{x_k}{\|x_k\|}=\alpha_ke_k+z_k
+\]
+Therefore, we have $\alpha_ke_k\to 1$ when $k\to\infty$, which implies 
+that $\alpha_k$ tends to 1, since we have chosen $e_k$ to be
+normalised (\ie $\|e_k\|=1$).
+
+We then can conclude that
+\[
+\frac{x_k}{\|x_k\|}\to e_\infty \textrm{ when }k\to\infty
+\]
+and the proof is done.
+%%%%%
+%%%%%
+\end{document}

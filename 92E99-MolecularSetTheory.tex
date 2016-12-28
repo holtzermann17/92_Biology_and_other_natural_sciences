@@ -1,0 +1,300 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MolecularSetTheory}
+\pmcreated{2013-03-22 18:11:37}
+\pmmodified{2013-03-22 18:11:37}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{molecular set theory}
+\pmrecord{42}{40770}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{92E99}
+\pmclassification{msc}{92E20}
+\pmclassification{msc}{92B15}
+\pmclassification{msc}{92E10}
+\pmsynonym{molecular reactions in organisms}{MolecularSetTheory}
+%\pmkeywords{molecular reactions in organisms}
+%\pmkeywords{wide-sense chemical kinetics in living systems and medical applications}
+\pmrelated{MolecularSetVariable}
+\pmrelated{AbstractRelationalBiology}
+\pmrelated{FunctionalBiology}
+\pmrelated{SupercategoriesOfComplexSystems}
+\pmrelated{GeneticNetsOrNetworks}
+\pmrelated{MolecularSetVariable}
+\pmrelated{CategoryOfMolecularSets}
+\pmrelated{SupercategoryOfMolecularSetVariables}
+\pmrelated{SupercategoryOfVariableMolecularSets}
+\pmdefines{multi-molecular reactions}
+\pmdefines{molecular class variable}
+\pmdefines{wide-sense chemical kinetics in living systems and medical applications}
+\pmdefines{category of molecular sets and their transformations representing chemical reactions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym,color,enumerate}
+%%\usepackage{xypic}
+\xyoption{curve}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+%the next gives two direction arrows at the top of a 2 x 2 matrix
+
+\newcommand{\directs}[2]{\def\objectstyle{\scriptstyle}  \objectmargin={0pt}
+\xy
+(0,4)*+{}="a",(0,-2)*+{\rule{0em}{1.5ex}#2}="b",(7,4)*+{\;#1}="c"
+\ar@{->} "a";"b" \ar @{->}"a";"c" \endxy }
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+
+\theoremstyle{plain}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\Ce}{\mathsf{C}}
+\newcommand{\Q}{\mathsf{Q}}
+\newcommand{\grp}{\mathsf{G}}
+\newcommand{\dgrp}{\mathsf{D}}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{\operatorname{Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+
+\newcommand{\hdgb}{\boldsymbol{\rho}^\square}
+\newcommand{\hdg}{\rho^\square_2}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\renewcommand{\leq}{{\leqslant}}
+\renewcommand{\geq}{{\geqslant}}
+
+\def\red{\textcolor{red}}
+\def\magenta{\textcolor{magenta}}
+\def\blue{\textcolor{blue}}
+\def\<{\langle}
+\def\>{\rangle}
+\begin{document}
+\textbf{Description:} {\em Molecular set theory (MST)} is a mathematical formulation of the wide-sense chemical kinetics of biomolecular reactions in terms of sets of molecules and their chemical transformations represented by set-theoretical mappings between molecular sets. In a more general sense, MST is the \emph{theory of molecular categories} defined as categories of molecular sets and their chemical transformations represented as set-theoretical mappings of molecular sets. \\
+
+Molecular set theory was introduced by Anthony Bartholomay (\cite{BAF60, BAF65, BAF71}) and its applications were developed in Mathematical Biology and especially in Mathematical Medicine. The theory has also contributed to biostatistics and the formulation of clinical biochemistry problems in mathematical formulations of pathological, biochemical changes of interest to Physiology, Clinical Biochemistry and Medicine.
+A precise mathematical presentation of the basic concepts in molecular set theory is as follows.
+
+\subsection{The Representation of Uni-Molecular Biochemical Reactions as Natural Transformations. Quantum Observables of a Molecular Class Variable}
+
+The \emph{uni-molecular chemical reaction} is here represented by the natural transformations    $\eta :h^A\longrightarrow h^B$, through the following commutative diagram:
+\begin{equation}
+\def\labelstyle{\textstyle}
+\xymatrix@M=0.1pc @=4pc{h^A(A) = H(A,A) \ar[r]^{\eta_{A}}
+\ar[d]_{h^A(t)} &  h^B (A) = H(B,A)\ar[d]^{h^B (t)} \\  {h^A (B) =
+H(A,B)}  \ar[r]_{\eta_{B}} & {h^B (B) = H(B,B)}}
+\end{equation}
+with the states of the molecular sets $Au = a_1, \ldots, a_n$ and
+$Bu = b_1, \ldots b_n$ being represented by certain endomorphisms
+in H(A,A) and H(B,B), respectively.
+
+The \emph{observable of an $m.c.v$}, $B$, characterizing the products ``$B$" of a chemical reaction is defined as a morphism:
+
+$$\gamma : H (B,B) \longrightarrow  R ,$$
+where R is the set of real numbers. This \emph{mcv-observable}  is subject
+to the following commutativity conditions:
+\begin{equation}
+\def\labelstyle{\textstyle}
+  \xymatrix@M=0.1pc @=4pc{H(A,A) \ar[r]^{f}  \ar[d]_{e} & H(B,B)\ar[d]^{\gamma} \\  {H(A,A)}  \ar[r]_{\delta} & {R},}
+\end{equation}~
+with  $c: A^*_u   \longrightarrow   B^*_u$,    and $A^*_u$, $B^*_u$  being
+specially prepared \emph{fields of states}, within a measurement uncertainty range, $\Delta$.
+
+\subsection{An Example of an Emerging Super-Complex Organism as A Quantum--Enzymatic System.}
+
+Note that in the case of either uni-molecular or multi-molecular, \emph{reversible} reactions one obtains a \emph{quantum-molecular groupoid}, QG, defined as above in terms of the mcv-observables.  In the case of an enzyme, E, with an activated complex, $(ES)^*$,
+a \emph{quantum biomolecuar groupoid} can be uniquely defined in terms of mcv-observables for the enzyme, its activated complex $(ES)^*$ and the substrate, S.  Quantum tunnelling in $(ES)^*$ then leads to the separation of the reaction product and the enzyme, E, which enters then a new reaction cycle with another substrate molecule S', indistinguishable--or equivalent to--S. By considering a sequence of two such reactions coupled together,
+\med
+$QG_1 \leftrightarrows QG_2$,
+\med
+corresponding to an enzyme f, coupled to a ribozyme $\phi$, one obtains a \emph{quantum-molecular realization of the simplest (\textbf{M,R)}}-system,  $(f, \phi)$  
+\med
+\noindent
+
+  The non-reductionist caveat here is that the relational systems considered above
+are open ones, exchanging both energy and mass with the system's environment in a manner
+which is dependent on time, for example in cycles, as the system `divides'--reproducing itself; therefore, even though generalized quantum-molecular observables can be defined
+as specified above, neither a stationary nor a dynamic Schr\"{o}dinger equation holds
+for such examples of `super-complex' systems. Furthermore, instead of just energetic constraints--such as the standard quantum Hamiltonian--one has the constraints imposed
+by the diagram commutativity related to the mcv-observables, canonical functors and
+natural transformations, as well as to the concentration gradients, diffusion processes,
+chemical potentials/activities (molecular Gibbs free energies), enzyme kinetics, and so on.   Both the canonical functors and the natural transformations defined above for uni- or
+multi- molecular reactions represent the relational increase in complexity of the emerging,
+super-complex dynamic system, such as, for example, the simplest (\textbf{M,R})-system,
+$(f, \phi)$.
+\med
+\begin{definition} \emph{Multi-Molecular Reactions} are defined by a \emph{canonical functor}:
+ $$h: M \longrightarrow  [M, \mathsf{Set}]$$ which assigns to each molecular set $A$ 
+the functor $h^A$, and to each chemical transformation $t: A \longrightarrow B$, the natural transformation $\eta^{AB}: h^A\longrightarrow h^B$.
+\end{definition}
+
+\begin{thebibliography}{9}
+
+\bibitem{BAF60}
+Bartholomay, A. F.: 1960. Molecular Set Theory. A mathematical representation for chemical reaction mechanisms. \emph{Bull. Math. Biophys.}, \textbf{22}: 285-307.
+
+\bibitem{BAF65}
+Bartholomay, A. F.: 1965. Molecular Set Theory: II. An aspect of biomathematical theory of sets., \emph{Bull. Math. Biophys.} \textbf{27}: 235-251.
+
+\bibitem{BAF71}
+Bartholomay, A.: 1971. Molecular Set Theory: III. The Wide-Sense Kinetics of Molecular Sets ., \emph{Bulletin of Mathematical Biophysics}, \textbf{33}: 355-372.
+
+\bibitem{ICB2}
+Baianu, I. C.: 1983, Natural Transformation Models in Molecular
+Biology., in \emph{Proceedings of the SIAM Natl. Meet}., Denver,
+CO.; Eprint No. 3675 at {\em cogprints.org/3675/01} as {\em Naturaltransfmolbionu6.pdf}.
+
+\bibitem{ICB2}
+Baianu, I.C.: 1984, A Molecular-Set-Variable Model of Structural
+and Regulatory Activities in Metabolic and Genetic Networks
+\emph{FASEB Proceedings} \textbf{43}, 917.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

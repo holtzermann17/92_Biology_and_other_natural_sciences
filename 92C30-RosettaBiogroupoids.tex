@@ -1,0 +1,289 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RosettaBiogroupoids}
+\pmcreated{2013-03-22 18:11:57}
+\pmmodified{2013-03-22 18:11:57}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Rosetta biogroupoids}
+\pmrecord{48}{40776}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{92C30}
+\pmclassification{msc}{92B99}
+\pmclassification{msc}{92B20}
+\pmclassification{msc}{92B05}
+\pmsynonym{coevolution groupoids}{RosettaBiogroupoids}
+\pmsynonym{social interaction group patterns}{RosettaBiogroupoids}
+%\pmkeywords{organsimic Supercategories}
+%\pmkeywords{ultra-complex systems}
+\pmrelated{UltraComplexSystems}
+\pmrelated{CategoricalOntology}
+\pmrelated{ErdHosNumber}
+\pmrelated{ComplexSystemsBiology}
+\pmrelated{SupercategoriesOfComplexSystems}
+\pmrelated{Biogroupoids}
+\pmrelated{AbstractRelationalBiology}
+\pmrelated{CWComplexDefinitionRelatedToSpinNetworksAndSpinFoams}
+\pmrelated{HighlyComplexSystems}
+\pmdefines{topology of social interactions}
+\pmdefines{social networking}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+ \newcommand{\<}{{\langle}}
+
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\geometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+
+\newcommand{\quadr}[4]{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+\textbf{Background}
+It seems that the awareness of the self of other individuals developed at first, and then,
+through--and as \emph{as an extension of the others}-- to oneself,  \emph{self awareness} emerged in a final step. Such pre--historic, societal/social interactions that are based on consensus, are also called `mutual'. 
+These considerations lead to a natural representation of one's `self' emergence in terms of the following mathematical concept.
+
+\begin{definition}  
+A \emph{Rosetta biogroupoid}, $\mathsf{R}_{\grp}$, is a representation of characteristic, star-connected
+patterns of two--way social (cooperative) interactions: $\Longleftrightarrow$, or  $\Updownarrow$, that are defined as topological groupoids $\grp_S$ with star-- ($*$), or rose-- like, internal symmetries. From a strictly topological 
+viewpoint, a \emph{Rosetta biogroupoid} is a particular type of highly connected network, or oriented multi--graph, consisting of central nodes (vertices) connected through bi-directional edges representing the mutual interactions
+between individuals in a population or society; thus, it can also be regarded as a particular type of low-dimensional
+\PMlinkname{CW complex with a (CW) cellular structure}{CWComplexDefinitionRelatedToSpinNetworksAndSpinFoams} determined by the organisms, such as humans, and their mutual interactions. 
+\end{definition} 
+
+
+\textbf{Example} An especially interesting case of Rosetta groupoids is that of \emph{freely generated structures over a graph}, or \emph{network}, of social interactions with different degrees/orders or levels of connectivities; a good example is that of the Erd\"os `connectivity' number, defined by the length of the chain connecting an Erd\"os co-author of a published mathematical paper with Erd\"os to another co-author of the first one, and so on. 
+
+A \emph{`Rosetta biogroupoid'} structure can be depicted as in the following diagram, but possibly with as many as twenty five branches from the center, reference individual:
+\begin{equation}
+\xymatrix{ & \text{Neighbour's Self} \ar[d] &
+\\  \text{Neighbour's Self} \ar[r] & {\text{Oneself}} \ar[r] \ar[l] \ar[u]\ar[d]  &
+ \text{Neighbour's Self} \ar[l]
+\\ &  \text{Neighbour's Self}   \ar[u] & }
+\end{equation}
+
+%.............................$Neighbor's.. SELF$
+%\med
+%...........................................$\Updownarrow$
+%\med
+%$Neighbor's.SELF \Longleftrightarrow 1-SELF\Longleftrightarrow Neighbor's. SELF$
+%\med...........................................$\Updownarrow$
+%\med
+%$.............................$Neighbor's.. SELF$
+\med
+\noindent {\textbf{Diagram 1}}: \emph{A Rosetta biogroupoid} of
+consensual, societal interactions leading to self-awareness, one's
+self and full consciousness; there could be as few as five, or as
+many as twenty five, individuals in a pre-historic society of
+humans; here only four are represented as branches.
+
+
+
+
+\textbf{Remark:} such cooperative interactions caused- through social and biological coevolution- the emergence of human (and/or `humanoid') structured languages with both syntax and semantics; the latter in their turn facilitated the development of self-awareness and the emergence of the human mind as an ultra-complex system, and consciousness as an ultra-complex (meta-process) of processes. 
+
+%%%%%
+%%%%%
+\end{document}

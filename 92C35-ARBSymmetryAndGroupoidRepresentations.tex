@@ -1,0 +1,340 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ARBSymmetryAndGroupoidRepresentations}
+\pmcreated{2013-03-22 18:11:51}
+\pmmodified{2013-03-22 18:11:51}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{ARB symmetry and groupoid representations }
+\pmrecord{58}{40774}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{92C35}
+\pmclassification{msc}{92C30}
+\pmsynonym{integrative systems biology}{ARBSymmetryAndGroupoidRepresentations}
+\pmsynonym{relational biology}{ARBSymmetryAndGroupoidRepresentations}
+\pmsynonym{abstract relational biology}{ARBSymmetryAndGroupoidRepresentations}
+%\pmkeywords{relational biology}
+%\pmkeywords{biological functions and organization represented as graphs and categories}
+%\pmkeywords{integrative systems biology}
+%\pmkeywords{relational biology}
+%\pmkeywords{organismic sets}
+%\pmkeywords{biotopology}
+%\pmkeywords{bioinformatics}
+%\pmkeywords{activities in super-complex biological systems}
+%\pmkeywords{Human Genome Pro}
+\pmrelated{MolecularSetTheory}
+\pmrelated{GroupoidRepresentation4}
+\pmrelated{FrameGroupoid}
+\pmrelated{CategoricalDynamics}
+\pmrelated{QuantumGroupoids2}
+\pmrelated{Groupoids}
+\pmrelated{LieSuperalgebra3}
+\pmrelated{SupercategoriesOfComplexSystems}
+\pmrelated{ComplexSystemsBiology}
+\pmrelated{AbstractRelationalBiology}
+\pmrelated{GeneticNetsOrNetworks}
+\pmrelated{OrganismicSets2}
+\pmdefines{mathematical representations}
+\pmdefines{$C_3v$ symmetry group}
+\pmdefines{symmetry operations}
+\pmdefines{abstract structure}
+\pmdefines{abstract category}
+\pmdefines{concrete category}
+\pmdefines{group representations}
+\pmdefines{abstract groupoid representations}
+\pmdefines{SUSY symmetry group product}
+\pmdefines{functional biology}
+\pmdefines{ARB}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+%\newcommand{\>}{{\rangle}}
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\midsqn}[1]{\ar@{}[dr]|{#1}}
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+
+\begin{document}
+\section{Symmetry and groupoid representations in functional and abstract relational biology (ARB)}
+
+ Let us consider first the modelling of functional biodynamics in concrete categories in connection with
+mathematical representions of biological, or physiological functions of living organisms.
+This will provide a foundation for the introduction of groupoid symmetry and groupoid
+representations in functional and abstract relational biology (ARB).
+
+\subsection{Categorical dynamics and mathematical representations in functional biology}
+\emph{Functional biology} is mathematically represented through models of integrated biological functions and activities that are expressed in terms of mathematical relations between the metabolic and repair components (Rashevsky, 1962 \cite{NR62}). Such representations of complex biosystems, mappings/functions, as well as their super-complex dynamics are important for understanding physiological dynamics and functional biology in terms of algebraic topology concepts, concrete categories, and/or graphs; thus, they are describing or modeling theost important
+inter-relations of biological functions in living organisms. This approach to biodynamics in terms of
+category theory representations of biological functions is part of the broader field of \emph{categorical dynamics}.
+
+In order to establish mathematical relations, or laws, in biology one needs to define the key concept of 
+\emph{mathematical representations}. A general definition of such representations as utilized by mathematical or theoretical biologists, as well as mathematical physicists, is specified next together with well-established mathematical examples.
+
+\begin{definition}
+\emph{Mathematical representations} are defined as \emph{associations $\Re : S^* \to C $
+between abstract structures $S^*$ and classes $C$, or sets ($S$) of concrete structures $S_c$}, often satisfying
+several additional conditions, or axioms imposed by the mathematical context (or category) to whom 
+the abstract structures $S^*$ belong. Thus, in \emph{representation theory} one is concerned with various collections
+of quantities which are similar to the abstract structure in regard to one or several mathematical operations.   
+\end{definition}
+
+\textbf{Notes.} \emph{Abstract structures} are employed above in the sense defined by Bourbaki (1964) \cite{NB64}.
+Unlike \emph{abstract categories} that may have only morphisms (or arrows) and `no objects'
+(or vertices), other \emph{abstract structures} are simply defined as `pure' algebraic objects with
+no numerical content or direct physical interpretation, whereas the \emph{concrete structures} do have
+either a numerical content or a direct physical interpretation.
+
+
+\textbf{Examples}
+\begin{enumerate}
+
+\item  An abstract symmetry group, $G$ with multiplication ``$\cdot$" has mathematical representations by matrices, or numbers, that have the \emph{same multiplication table} as the group (McWeeny, 2002 \cite{RMcW2k2}). In this example, such \emph{similarity in structure} is called a \emph{homomorphism}.  As a specific illustration consider the symmetry group $C_{3v}$ that admits a numerical representation by the sextet of numbers $(1,1,1,-1,-1,-1)$ (or line matrix)
+for the group symmetry elements $(E, C_3, \bar{C}_3, \sigma_1, \sigma_2, \sigma_3)$, where the latter
+five are rotations (or the \emph{generators} of this symmetry group) and $E$ is the \emph{unit element} of the
+group. Note that the symmetry group $C_{3v}$ has the obvious \emph{geometric} interpretation as the 
+collection of \emph{symmetry operations} of an equilateral triangle. Such symmetry operations are defined by
+the abstract group elements, with the group unit element playing the role of the `identity symmetry operation'
+that leaves any physical object (or space on which it acts) unchanged, such as a $360$ degree rotation in three-dimensional (real) space. Note that each such symmetry operation of the symmetry group has an \emph{inverse} which `cancels out' exactly the action of its opposite symmetry operation (e.g., $C_3$ and $\bar{C}_3$),
+and of course, multiplication by $E$ leaves all symmetry operations unchanged. (This is also true for \emph{non-Abelian, or noncommutative} groups with $E$ acting either on the \emph{left} or on the \emph{right} of all the other group operations). 
+
+\item The previous example extends to abstract groupoids $\grp$ whose representations are, however, defined as 
+\emph{morphisms (or functors)}, to either \emph{families} or \emph{fiber bundles} of spaces- such as Hilbert spaces $\H$. Moreover, one notes that groupoids exhibit both \emph{internal} and \emph{external} symmetries 
+(\emph{viz.} Weinstein, 1998). Whereas a group can be considered as a \emph{one object} category with all invertible 
+morphisms, a groupoid can be defined as a category with all invertible morphisms but with \emph{many objects} instead of just one. Therefore, the groupoid structure has a substantial advantage over the group structure
+as it allows for the simultaneous representation of extended symmetries beyond the simpler symmetries represented by groups. 
+
+\item The favorite family of group representations in the current, Standard Model of Physics (called \emph{SUSY}) is that of the $U(1) \times SU(2) \times SU(3)$ product of symmetry groups; this choice might explain some of the limitations encountered in high energy physics using SUSY and the corresponding physical representations of the symmetry associated with this product of groups, rather than \emph{quantum groupoid}-related symmetries. It is also interesting that \emph{noncommutative geometry} models of quantum gravity seem also to be `consistent with SUSY' (\emph{viz.} A. Connes, 2004). 
+ 
+\item The quantum treatment of gravitational fields leads to extended quantum symmetries 
+(called \emph{`supersymmetry'}) that require mathematical representations of superfields in terms of 
+\emph{graded `Lie' algebras}, or \emph{Lie superalgebras} (Weinberg, 2004 \cite{SW2k4}).
+
+\item Simplified mathematical models of networks of interacting living cells were recently formulated
+in terms of \emph{symmetry groupoid representations}, and several interesting theorems were proven for such 
+topological structures (Stewart, 2007) that are relevant to relational and functional biology.  
+
+\end{enumerate}
+
+Several areas of functional biology, such as:  \emph{functional genomics, interactomics,
+and computer modeling} of the physiological functions in living organisms, including humans
+are now being developed very rapidly because of the huge impact of mathematical representations
+and ultra-fast numerical computations in medicine, biotechnology and all life sciences. 
+Thus, biomathematical and bioinformatics approaches to functional biology 
+utilize a wide range of mathematical concepts, theories and tools, from ODE's to biostatistics, 
+probability theory, graph theory, topology, abstract algebra, set theory, algebraic topology, categories, 
+many-valued logic algebras, higher dimensional algebra (HDA) and organismic supercategories. 
+Without such mathematical approaches and the use of ultra-fast computers, the recent completion of the first 
+Human genome projects would not have been possible, because it would have taken much longer and 
+would have been far more costly.  
+
+
+\begin{thebibliography}{9}
+\bibitem{RMcW2k2}
+R. McWeeney. 2002. \emph{Symmetry : An Introduction to Group Theory and Its Applications.}
+Dover Publications Inc.: Mineola, New York, NY.
+
+\bibitem{NR62}
+N. Rashevsky.1962. \emph{Mathematical Biology}. Chicago University Press: Chicago. 
+
+\bibitem{SW2k4}
+S. Weinberg. 2004. \emph{Quantum Field Theory}, vol.3. Cambridge University Press: Cambridge, UK.
+
+\bibitem{NB64}
+N. Bourbaki. 1964. Alg$\`e$bre commutative in $\'E$l$\'e$ments de Math$\'e$matique, Chs. 1-6, Hermann: Paris.
+
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

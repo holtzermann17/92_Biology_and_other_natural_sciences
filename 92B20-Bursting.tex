@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Bursting}
+\pmcreated{2013-03-22 16:28:51}
+\pmmodified{2013-03-22 16:28:51}
+\pmowner{emi}{15656}
+\pmmodifier{emi}{15656}
+\pmtitle{bursting}
+\pmrecord{7}{38648}
+\pmprivacy{1}
+\pmauthor{emi}{15656}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{92B20}
+\pmclassification{msc}{92C20}
+\pmsynonym{burst}{Bursting}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{action}
+\PMlinkescapeword{potentials}
+\PMlinkescapeword{triplet}
+\PMlinkescapeword{quadruplet}
+
+In neuroscience, {\bf bursting} denotes two or more action potentials (spikes) fired by a neuron, followed by a period of quiescence. A burst of two spikes is called a {\bf doublet}, three spikes - {\bf triplet}, four - {\bf quadruplet}, etc. 
+
+Most mathematical models of bursting can be written in the singularly perturbed form
+\[
+\begin{matrix} 
+\dot{x}  = \  f(x, y) & \ \ \ \ \ \ \ \mbox{(fast spiking)} \\ 
+\dot{y}  =  \mu g(x, y) & \mbox{(slow modulation)}
+\end{matrix}
+\]
+where $x \in {\mathbb R}^n$ is the fast variable that simulates fast spiking of the neuron, and $y \in {\mathbb R}^m$ is the slow variable that modulates such spiking activity.
+
+A topological classification of bursters relies on the bifurcations of the fast subsystem (variable $x$) when the slow subsystem (variable $y$) is treated as a parameter.
+
+\begin{thebibliography}{20}
+
+\bibitem[iz]{IZ} Izhikevich E.M. (2007) Dynamical Systems in Neuroscience: The Geometry of Excitability and Bursting. The MIT Press.
+
+\bibitem[izb]{IZB} Eugene M. Izhikevich (2006) Bursting. Scholarpedia, p.1401 (available online at http://www.scholarpedia.org/article/Bursting).
+
+\end{thebibliography}
+
+
+ 
+%%%%%
+%%%%%
+\end{document}

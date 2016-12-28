@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LotkaVolterraSystem}
+\pmcreated{2013-03-22 13:22:25}
+\pmmodified{2013-03-22 13:22:25}
+\pmowner{jarino}{552}
+\pmmodifier{jarino}{552}
+\pmtitle{Lotka-Volterra system}
+\pmrecord{9}{33903}
+\pmprivacy{1}
+\pmauthor{jarino}{552}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{92D40}
+\pmclassification{msc}{92D25}
+\pmclassification{msc}{92B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The Lotka-Volterra system was derived by Volterra in 1926 to describe the relationship between a predator and a prey, and independently by Lotka in 1920 to describe a chemical reaction.
+
+Suppose that $N(t)$ is the prey population at time $t$, and $P(t)$ is the predator population. Then the system is
+\begin{eqnarray*}
+\frac{dN}{dt}&=& N(a-bP) \\
+\frac{dP}{dt}&=& P(cN-d)
+\end{eqnarray*}
+where $a$, $b$, $c$ and $d$ are positive constants. The term $aN$ is the birth of preys, $-bNP$ represents the diminution of preys due to predation, which is converted into new predators with a rate $cNP$. Finally, predators die at the natural death rate $d$.
+
+Local analysis of this system is not very complicated (see, e.g., \cite{Murray}). It is easily shown that it admits the zero equilibrium (unstable) as well as a positive equilibrium, which is neutrally stable. Hence, in the neighborhood of this equilibrium exist periodic solutions (with period $T=2\pi(ad)^{-1/2}$).
+
+This system is \PMlinkescapetext{simple}, and has obvious limitations, one of the most important being that in the absence of predator, the prey population grows unbounded. But many improvements and generalizations have been proposed, making the Lotka-Volterra system one of the most studied systems in mathematical biology.
+
+\begin{thebibliography}{1}
+\bibitem{Murray}
+J.D. Murray (2002). {\em Mathematical Biology. I. An Introduction.} Springer.
+\bibitem{Lotka}
+Lotka, A.J. (1925). Elements of physical biology. Baltimore: Williams \& Wilkins Co.
+\bibitem{Volterra}
+Volterra, V. (1926). Variazioni e fluttuazioni del numero d'individui in specie animali conviventi. Mem. R. Accad. Naz. dei Lincei. Ser. VI, vol. 2.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}
